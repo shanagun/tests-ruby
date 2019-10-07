@@ -12,6 +12,7 @@ shout("hello world")
 def repeat(string, n)
     return ([string] * n).join' '
 end
+repeat("hello", 2)
 repeat("hello", 3)
 
 def start_of_word(string, n)
@@ -23,18 +24,18 @@ start_of_word("Bob", 2)
 start_of_word(s, 1)
 
 def first_word(string)
-    string.split.first
+    return string.split.first
 end
 first_word("Hello World")
 first_word("oh dear")
 
-mots = ['and', 'over', 'the']
-def titleize(string)
-    x = string.split.map { |i| 
-    mots.include?(i) ? i : i.capitalize 
-}
-    x.first.capitalize!
-    x.join(' ')
+def titleize(s)
+    mots = ['and', 'the']
+        t = s.split.map { |x|
+          mots.include?(x) ? x : x.capitalize
+        }
+        t.first.capitalize!
+        t.join(' ')
 end
 titleize("jaws")
 titleize("david copperfield")
